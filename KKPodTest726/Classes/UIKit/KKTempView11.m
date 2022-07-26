@@ -9,12 +9,12 @@
 
 @implementation KKTempView11
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor redColor];
+        NSLog(@"version==0.2.0");
+    }
+    return self;
 }
-*/
 
 @end

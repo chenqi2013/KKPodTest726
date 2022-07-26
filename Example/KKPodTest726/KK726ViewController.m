@@ -7,7 +7,7 @@
 //
 
 #import "KK726ViewController.h"
-//#import "KKTempView11.h"
+#import "KKTempView11.h"
 
 
 @interface KK726ViewController ()
@@ -20,6 +20,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    KKTempView11 *kk = [[KKTempView11 alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:kk];
     NSLog(@"test726");
 }
 
