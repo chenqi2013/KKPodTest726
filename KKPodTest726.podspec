@@ -21,13 +21,12 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/chenqi/KKPodTest726'
+  s.homepage         = 'https://github.com/chenqi2013/KKPodTest726'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'chenqi' => '419499748@qq.com' }
-  s.source           = { :git => 'https://github.com/chenqi/KKPodTest726.git', :tag => s.version.to_s }
+  s.author           = { 'chenqi2013' => '419499748@qq.com' }
+  s.source           = { :git => 'https://github.com/chenqi2013/KKPodTest726.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'KKPodTest726/Classes/**/*'
@@ -35,6 +34,18 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'KKPodTest726' => ['KKPodTest726/Assets/*.png']
   # }
+  
+  s.resource_bundles = {
+      'KKPodTest' => ['KKPodTest726/Assets/*.xcassets']
+  }
+  
+  s.subspec 'UIKit' do |ss|
+      ss.source_files = 'KKPodTest726/Classes/UIKit/*.{h,m}'
+  end
+  
+  s.subspec 'Category' do |ss|
+      ss.source_files = 'KKPodTest726/Classes/Category/*.{h,m}'
+  end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
